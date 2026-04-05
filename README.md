@@ -1,110 +1,65 @@
-
 # Đánh Giá Thực Nghiệm Mức Độ Áp Dụng TLS, ALPN Và HSTS Trên Tên Miền .vn
 
 **Đối Chiếu Tiêu Chuẩn NIST SP 800-52 Rev.2 & BSI TR-02102-2**
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Python](https://img.shields.io/badge/Python-3.10%2B-blue)](https://www.python.org/)
-[![Last Scan](https://img.shields.io/badge/Last%20Scan-05%20Tháng%204,%202026-success)](https://github.com/KuruuCrypto/tls-vn-assessment)
+[![Bash](https://img.shields.io/badge/Bash-5.0+-blue)](https://www.gnu.org/software/bash/)
+[![Last Scan](https://img.shields.io/badge/Last%20Scan-05%20Tháng%204,%202026-success)](https://github.com/kurunetwork/tls-vn-assessment)
 
 ---
 
 ### 📋 Tóm tắt nghiên cứu
 
-Báo cáo trình bày nghiên cứu thực nghiệm quy mô lớn đầu tiên tại Việt Nam về mức độ triển khai **TLS 1.3**, **ALPN**, **HSTS** và cipher suite trên toàn bộ tên miền TLD `.vn` (dữ liệu Tranco tháng 3/2026).
+Báo cáo trình bày nghiên cứu thực nghiệm quy mô lớn đầu tiên tại Việt Nam về mức độ triển khai **TLS 1.3**, **ALPN**, **HSTS** và cipher suite trên toàn bộ tên miền TLD `.vn`.
 
 **Kết quả nổi bật:**
 - 100% tên miền đã loại bỏ hoàn toàn TLS 1.0/1.1
 - TLS 1.3 đạt **77,15%** (95% CI: [76,13% – 78,17%])
-- **75,37%** kết nối TLS 1.3 ưu tiên **ChaCha20-Poly1305** (Non-FIPS theo NIST)
-- Tương quan mạnh mẽ với hạ tầng **CDN** (đặc biệt Cloudflare): Cramér’s V = 0.62, p < 0.001
-- HSTS chỉ đạt **26,04%** → khoảng trống lớn về bảo vệ chống downgrade attack
-
-Nghiên cứu chỉ ra sự phân nhánh rõ rệt giữa tiêu chuẩn **de facto** (CDN) và tiêu chuẩn **de jure** (NIST).
+- **75,37%** kết nối TLS 1.3 ưu tiên **ChaCha20-Poly1305**
+- Tương quan mạnh mẽ với hạ tầng **CDN** (đặc biệt Cloudflare)
+- HSTS chỉ đạt **26,04%**
 
 ---
 
 ### 🧪 Dữ liệu & Phương pháp
 - Nguồn: Tranco Top 1M (ID: ZWLZG, 17/03/2026) + lọc CrUX Việt Nam
 - Mẫu hợp lệ: **6.456** tên miền .vn
-- Công cụ: ZGrab2, TLS_Checker, HTTPX
-- Ngày quét: 05/04/2026 (tại Việt Nam)
-- Phân tích thống kê: Chi-square test + Cramér’s V + 95% Confidence Interval
+- Ngày quét: 05/04/2026
+- Công cụ: ZGrab2 + HTTPX + OpenSSL custom
 
 ---
 
-### 📁 Cấu trúc repository
-
-```
+### 📁 Cấu trúc repository (hiện tại)
 tls-vn-assessment/
-├── paper/                  # Bài báo LaTeX (IEEE format)
-│   ├── main.tex
-│   ├── main.pdf
-│   └── figures/
-│       ├── pie_cipher_tls13.pdf
-│       └── bar_chacha_cdn.pdf
-├── src/                    # Mã nguồn pipeline quét
-│   ├── zgrab_scan.py
-│   ├── analyze_tls.py
-│   └── detect_cdn.py
-├── data/                   # Dữ liệu tóm tắt (anonymized)
-│   ├── summary_stats.csv
-│   └── cdn_breakdown.csv
-├── requirements.txt
-├── LICENSE
-└── README.md
-```
+├── scripts/                          # Pipeline quét TLS (bash)
+│   ├── 01_filter_vn.sh
+│   ├── 02_zgrab_tls.sh
+│   ├── 03_httpx_layer7.sh
+│   ├── 04_custom_openssl_curl.sh
+│   ├── 05_final_merge.sh
+│   └── run_all.sh
+├── README.md
+└── .gitignore
+text---
 
----
+### 📝 Cách sử dụng pipeline
 
-### 📊 Hình ảnh minh họa trong bài báo
+```bash
+cd scripts
+chmod +x *.sh
+./run_all.sh
 
-- **Biểu đồ tròn**: Phân bố cipher suite TLS 1.3  
-- **Biểu đồ cột**: Tỷ lệ ChaCha20-Poly1305 theo nhóm CDN / non-CDN
+📄 License
+Mã nguồn pipeline được phân phối theo giấy phép MIT.
 
----
+👤 Tác giả
+Phan Văn Hợp
+Sinh viên năm cuối Khoa Toán – Tin học
+Trường Đại học Sư phạm – Đại học Đà Nẵng
+Email: dinhonphan226@gmail.com
+GitHub: @kurunetwork
 
-### 📝 Cách trích dẫn (BibTeX)
+⭐ Nếu repo hữu ích, hãy cho mình 1 star nhé!
+Mọi góp ý vui lòng tạo Issue.
 
-```bibtex
-@article{phan2026tlsvn,
-  author  = {Phan Văn Hợp},
-  title   = {Đánh Giá Thực Nghiệm Mức Độ Áp Dụng TLS, ALPN Và HSTS Trên Tên Miền .vn: Đối Chiếu Tiêu Chuẩn NIST Và BSI},
-  journal = {IEEE Access (đang xem xét)},
-  year    = {2026},
-  month   = {4},
-  note    = {Preprint available at https://github.com/KuruuCrypto/tls-vn-assessment}
-}
-```
-
----
-
-### 📄 License
-Phân phối theo giấy phép **MIT** — bạn được tự do sử dụng, sửa đổi và phân phối mã nguồn.  
-Dữ liệu tóm tắt được cấp phép **CC-BY-4.0**.
-
----
-
-### 👤 Tác giả
-**Phan Văn Hợp**  
-Sinh viên năm hai Khoa Toán – Tin học  
-Trường Đại học Sư phạm – Đại học Đà Nẵng  
-Email: 3120224064@ued.udn.vn  
-GitHub: [@KuruuCrypto](https://github.com/KuruuCrypto)
-
----
-
-### 🙏 Cảm ơn
-- ZMap Project (ZGrab2)
-- ProjectDiscovery (HTTPX)
-- Tranco Top Sites Ranking
-- Cộng đồng an ninh mạng Việt Nam
-
----
-
-**⭐ Nếu bạn thấy repo hữu ích, hãy cho mình 1 star nhé!**  
-Mọi góp ý hoặc hợp tác vui lòng tạo Issue hoặc Pull Request.
-
----
-*Last updated: 05 Tháng 4, 2026*
-```
+Last updated: 05 Tháng 4, 2026
