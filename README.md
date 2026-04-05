@@ -30,6 +30,8 @@ Báo cáo trình bày nghiên cứu thực nghiệm quy mô lớn đầu tiên t
 ---
 
 ### 📁 Cấu trúc repository (hiện tại)
+
+```
 tls-vn-assessment/
 ├── scripts/                          # Pipeline quét TLS (bash)
 │   ├── 01_filter_vn.sh
@@ -40,7 +42,9 @@ tls-vn-assessment/
 │   └── run_all.sh
 ├── README.md
 └── .gitignore
-text---
+```
+
+---
 
 ### 📝 Cách sử dụng pipeline
 
@@ -48,18 +52,27 @@ text---
 cd scripts
 chmod +x *.sh
 ./run_all.sh
+```
 
-📄 License
-Mã nguồn pipeline được phân phối theo giấy phép MIT.
+---
 
-👤 Tác giả
-Phan Văn Hợp
-Sinh viên năm cuối Khoa Toán – Tin học
-Trường Đại học Sư phạm – Đại học Đà Nẵng
-Email: dinhonphan226@gmail.com
-GitHub: @kurunetwork
+### 📄 License
+Mã nguồn pipeline được phân phối theo giấy phép **MIT**.
 
-⭐ Nếu repo hữu ích, hãy cho mình 1 star nhé!
-Mọi góp ý vui lòng tạo Issue.
+---
 
-Last updated: 05 Tháng 4, 2026
+### 👤 Tác giả
+**Phan Văn Hợp**  
+Sinh viên năm cuối Khoa Toán – Tin học  
+Trường Đại học Sư phạm – Đại học Đà Nẵng  
+Email: dinhonphan226@gmail.com  
+GitHub: [@kurunetwork](https://github.com/kurunetwork)
+
+---
+
+**⭐ Nếu repo hữu ích, hãy cho mình 1 star nhé!**  
+Mọi góp ý vui lòng tạo **Issue**.
+
+---
+*Last updated: 05 Tháng 4, 2026*
+```
