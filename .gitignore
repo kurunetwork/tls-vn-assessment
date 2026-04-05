@@ -1,0 +1,41 @@
+cat > .gitignore << 'EOF'
+# =============================================
+# FILE OUTPUT / KẾT QUẢ QUÉT - KHÔNG PUSH
+# =============================================
+domain.csv
+domains_for_httpx.txt
+domain_vn.txt
+httpx.json
+result.csv
+scan.json
+
+# Ignore tất cả file json/csv/log khác (an toàn)
+*.json
+*.csv
+*.log
+*.tmp
+
+# =============================================
+# FILE TẠM / CACHE
+# =============================================
+__pycache__/
+*.pyc
+*.pyo
+.DS_Store
+*.swp
+*.swo
+
+# =============================================
+# FILE CONFIG - GIỮ LẠI (không ignore)
+# =============================================
+!custom_dict.json
+!tls_dict.json
+
+# =============================================
+# FILE KHÁC (nếu cần)
+# =============================================
+*.gz
+*.zip
+*.tar
+*.bak
+EOF
