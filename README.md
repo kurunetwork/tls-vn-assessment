@@ -1,14 +1,4 @@
-**✅ ĐÚNG RỒI! Copy hết nguyên khối dưới đây luôn nhé.**
 
-Bạn chỉ cần:
-
-1. Vào GitHub repo của bạn  
-2. Nhấn **Add file → Create new file**  
-3. Đặt tên file là **`README.md`**  
-4. Xóa hết nội dung mặc định và **paste toàn bộ** đoạn dưới đây vào  
-5. Nhấn **Commit new file**
-
-```markdown
 # Đánh Giá Thực Nghiệm Mức Độ Áp Dụng TLS, ALPN Và HSTS Trên Tên Miền .vn
 
 **Đối Chiếu Tiêu Chuẩn NIST SP 800-52 Rev.2 & BSI TR-02102-2**
@@ -97,9 +87,9 @@ Dữ liệu tóm tắt được cấp phép **CC-BY-4.0**.
 
 ### 👤 Tác giả
 **Phan Văn Hợp**  
-Sinh viên năm cuối Khoa Toán – Tin học  
+Sinh viên năm hai Khoa Toán – Tin học  
 Trường Đại học Sư phạm – Đại học Đà Nẵng  
-Email: hynh2510@gmail.com  
+Email: 3120224064@ued.udn.vn  
 GitHub: [@KuruuCrypto](https://github.com/KuruuCrypto)
 
 ---
