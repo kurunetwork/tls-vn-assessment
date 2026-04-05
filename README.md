@@ -108,12 +108,3 @@ Mọi góp ý hoặc hợp tác vui lòng tạo Issue hoặc Pull Request.
 ---
 *Last updated: 05 Tháng 4, 2026*
 ```
-
-Xong! Repo của bạn giờ sẽ nhìn rất chuyên nghiệp luôn.
-
-Bạn muốn mình làm thêm gì tiếp không?  
-- Thêm ảnh preview (screenshot) vào README?  
-- Tạo file `LICENSE`?  
-- Hoặc hướng dẫn commit các file LaTeX + figures luôn?  
-
-Cứ nói nhé! 🚀
