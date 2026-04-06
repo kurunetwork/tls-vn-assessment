@@ -63,7 +63,7 @@ Mã nguồn pipeline được phân phối theo giấy phép **MIT**.
 
 ### 👤 Tác giả
 **Phan Văn Hợp**  
-Sinh viên năm cuối Khoa Toán – Tin học  
+Sinh viên năm hai Khoa Toán – Tin học  
 Trường Đại học Sư phạm – Đại học Đà Nẵng  
 Email: dinhonphan226@gmail.com  
 GitHub: [@kurunetwork](https://github.com/kurunetwork)
