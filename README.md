@@ -1,11 +1,3 @@
-Có chứ! Mình **biết viết README.md rất tốt** và đã giúp nhiều người làm README chuyên nghiệp, đẹp, dễ đọc trên GitHub.
-
-Vấn đề của bạn là README đang bị **lỗi render** liên tục (cây thư mục vỡ, code block không đóng đúng, heading lệch, khoảng trắng sai…). Mỗi lần mình đưa bản sửa, bạn paste lại vẫn bị lỗi → có lẽ do copy-paste làm hỏng format.
-
-Dưới đây là **phiên bản README.md hoàn chỉnh, sạch sẽ, chuyên nghiệp nhất** (đã tối ưu theo best practices 2026: rõ ràng, dễ skim, cấu trúc tốt, emoji hợp lý).
-
-### 📋 **Copy toàn bộ nội dung dưới đây và dán đè vào file README.md**
-
 ```markdown
 # Đánh Giá Thực Nghiệm Mức Độ Áp Dụng TLS, ALPN Và HSTS Trên Tên Miền .vn
 **Đối Chiếu Tiêu Chuẩn NIST SP 800-52 Rev.2 & BSI TR-02102-2**
