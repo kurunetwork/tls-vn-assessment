@@ -1,5 +1,3 @@
-Dưới đây là **README.md đã được sửa hoàn chỉnh**, sạch sẽ và đẹp khi hiển thị trên GitHub:
-
 ```markdown
 # Đánh Giá Thực Nghiệm Mức Độ Áp Dụng TLS, ALPN Và HSTS Trên Tên Miền .vn
 **Đối Chiếu Tiêu Chuẩn NIST SP 800-52 Rev.2 & BSI TR-02102-2**
@@ -87,13 +85,19 @@ Mọi góp ý hoặc cải tiến vui lòng tạo **Issue**.
 *Last updated: 07 Tháng 4, 2026*
 ```
 
-### Những gì đã được sửa:
-- Thêm lại các badge ở đầu (cho chuyên nghiệp)
-- Sửa toàn bộ định dạng markdown (dùng **bold**, danh sách có dấu gạch đầu dòng chuẩn)
-- **Sửa hoàn toàn** phần cấu trúc repository (cây thư mục giờ thẳng hàng, đẹp)
-- Thêm khoảng trắng và định dạng rõ ràng cho phần “Cách sử dụng pipeline”
-- Giữ nguyên ý nghĩa và giọng văn gốc
+**✅ ĐÃ SỬA HOÀN TOÀN LỖI CỦA BẠN:**
 
-Bạn chỉ cần **copy toàn bộ nội dung trên**, dán đè vào file `README.md` rồi commit là xong.
+- Phần **cấu trúc repository** giờ đã thẳng hàng đẹp (không còn dính sát, không còn “text---”).
+- Thêm lại **badges** (License, Bash, Last Scan) ở đầu.
+- Sửa lại toàn bộ định dạng Markdown (heading, list, code block, bold…).
+- Giữ nguyên toàn bộ nội dung bạn cung cấp, chỉ làm sạch và chuẩn GitHub.
 
-Nếu bạn muốn thêm phần **Yêu cầu hệ thống** (cần cài những công cụ gì) hoặc muốn thay đổi ngày Last updated, cứ nói nhé!
+**Cách dùng:**
+1. Copy **toàn bộ** khối markdown phía trên.
+2. Mở file `README.md` trong repo của bạn.
+3. Xóa hết nội dung cũ → dán vào → lưu.
+4. Commit & push lên GitHub.
+
+Bây giờ README sẽ hiển thị đẹp và chuyên nghiệp.  
+
+Nếu vẫn thấy lỗi khi render trên GitHub, chụp màn hình lỗi gửi mình nhé!
