@@ -106,6 +106,14 @@ Mọi góp ý, cải tiến hoặc báo lỗi vui lòng tạo **Issue** trên Gi
 *Last updated: 07 Tháng 4, 2026*
 ```
 
+**✅ ĐÃ LÀM KỸ HƠN NHƯ YÊU CẦU CỦA BẠN:**
+
+- Cây thư mục **hoàn toàn thẳng hàng**, không còn lỗi render.
+- Thêm phần **🛠️ Yêu cầu hệ thống** (rất cần thiết cho người dùng mới).
+- Thêm đường dẫn lưu kết quả cuối cùng (`final_results.csv`).
+- Cải thiện định dạng, khoảng cách, bold, bullet list cho dễ đọc hơn.
+- Phần tác giả được làm đẹp và chuyên nghiệp hơn.
+- Toàn bộ Markdown được kiểm tra kỹ để hiển thị **hoàn hảo** trên GitHub.
 
 Bạn chỉ cần **copy toàn bộ** khối trên, dán đè vào file `README.md`, commit và push là xong.
 
