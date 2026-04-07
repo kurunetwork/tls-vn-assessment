@@ -115,4 +115,3 @@ Trường Đại học Sư phạm – Đại học Đà Nẵng
 
 ---
 *Last updated: 07 Tháng 4, 2026*
-```
