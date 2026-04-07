@@ -1,3 +1,6 @@
+Dưới đây là nội dung file `README.md` đã được viết lại, định dạng chuẩn xác Markdown để hiển thị hoàn hảo trên GitHub, sửa lại cây thư mục và loại bỏ các phần hội thoại thừa:
+
+````markdown
 # Đánh Giá Thực Nghiệm Mức Độ Áp Dụng TLS, ALPN Và HSTS Trên Tên Miền .vn
 **Đối Chiếu Tiêu Chuẩn NIST SP 800-52 Rev.2 & BSI TR-02102-2**
 
@@ -26,21 +29,22 @@ Báo cáo trình bày **nghiên cứu thực nghiệm quy mô lớn đầu tiên
 - Công cụ: ZGrab2 + HTTPX + OpenSSL custom
 
 **📥 Chuẩn bị dữ liệu (bắt buộc trước khi chạy pipeline)**
-
 1. Truy cập: [https://tranco-list.eu/list/ZWLZG](https://tranco-list.eu/list/ZWLZG)
 2. Tải file CSV về (danh sách Top 1M đầy đủ)
 3. **Đổi tên file vừa tải về thành `domain.csv`** (rất quan trọng)
 4. Đặt file `domain.csv` vào thư mục `data/`
 
-Pipeline sẽ tự động lọc chỉ các domain `.vn` từ file này trong bước `01_filter_vn.sh`.
+> **Lưu ý:** Pipeline sẽ tự động lọc chỉ các domain `.vn` từ file này trong bước `01_filter_vn.sh`.
 
 ---
 
 ### 📁 Cấu trúc repository
+
+```text
 tls-vn-assessment/
 ├── data/
-│   └── domain.csv                  ← Đặt file Tranco đã đổi tên vào đây
-├── scripts/                        # Pipeline quét TLS (bash)
+│   └── domain.csv               ← Đặt file Tranco đã đổi tên vào đây
+├── scripts/                     # Pipeline quét TLS (bash)
 │   ├── 01_filter_vn.sh
 │   ├── 02_zgrab_tls.sh
 │   ├── 03_httpx_layer7.sh
@@ -49,17 +53,20 @@ tls-vn-assessment/
 │   └── run_all.sh
 ├── README.md
 └── .gitignore
-text---
+````
+
+-----
 
 ### 🛠️ Yêu cầu hệ thống
-- Hệ điều hành: Linux / macOS (khuyến nghị Ubuntu 22.04+)
-- Bash ≥ 5.0
-- Công cụ cần cài đặt:
-  - `zgrab2` (từ https://github.com/zmap/zgrab2)
-  - `httpx` (từ https://github.com/projectdiscovery/httpx)
-  - `openssl`, `curl`, `jq`
 
----
+  - **Hệ điều hành**: Linux / macOS (khuyến nghị Ubuntu 22.04+)
+  - **Bash**: ≥ 5.0
+  - **Công cụ cần cài đặt**:
+      - `zgrab2` (từ https://github.com/zmap/zgrab2)
+      - `httpx` (từ https://github.com/projectdiscovery/httpx)
+      - `openssl`, `curl`, `jq`
+
+-----
 
 ### 📝 Cách sử dụng pipeline
 
@@ -67,29 +74,37 @@ text---
 cd scripts
 chmod +x *.sh
 ./run_all.sh
-Pipeline sẽ thực hiện lần lượt:
+```
 
-Lọc domain .vn từ data/domain.csv
-Chạy quét TLS/ALPN/HSTS bằng ZGrab2 và HTTPX
-Merge kết quả cuối cùng vào thư mục data/
+**Pipeline sẽ thực hiện lần lượt:**
 
-Kết quả cuối cùng sẽ nằm tại: data/final_results.csv
+1.  Lọc domain `.vn` từ `data/domain.csv`
+2.  Chạy quét TLS/ALPN/HSTS bằng ZGrab2 và HTTPX
+3.  Merge kết quả cuối cùng vào thư mục `data/`
 
-📄 License
-Mã nguồn pipeline được phân phối theo giấy phép MIT.
+> 🎯 **Kết quả cuối cùng** sẽ nằm tại: `data/final_results.csv`
 
-👤 Tác giả
-Phan Văn Hợp
-Sinh viên năm hai Khoa Toán – Tin học
+-----
+
+### 📄 License
+
+Mã nguồn pipeline được phân phối theo giấy phép **MIT**.
+
+-----
+
+### 👤 Tác giả
+
+**Phan Văn Hợp** Sinh viên năm hai Khoa Toán – Tin học  
 Trường Đại học Sư phạm – Đại học Đà Nẵng
-Liên hệ:
 
-Email: dinhonphan226@gmail.com
-GitHub: @kurunetwork
+**Liên hệ:**
 
+  - **Email:** dinhonphan226@gmail.com
+  - **GitHub:** [@kurunetwork](https://www.google.com/search?q=https://github.com/kurunetwork)
 
-⭐ Nếu repo hữu ích, hãy cho mình 1 star nhé!
-Mọi góp ý, cải tiến hoặc báo lỗi vui lòng tạo Issue trên GitHub.
+-----
 
-Last updated: 07 Tháng 4, 2026
-text
+*⭐ Nếu repo hữu ích, hãy cho mình 1 star nhé\! Mọi góp ý, cải tiến hoặc báo lỗi vui lòng tạo Issue trên GitHub.*
+
+```
+```
