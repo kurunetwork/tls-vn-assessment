@@ -38,11 +38,11 @@ Báo cáo trình bày **nghiên cứu thực nghiệm quy mô lớn đầu tiên
 
 ### 📁 Cấu trúc repository
 
-```
+```text
 tls-vn-assessment/
 ├── data/
-│   └── domain.csv                  ← Đặt file Tranco đã đổi tên vào đây
-├── scripts/                        # Pipeline quét TLS (bash)
+│   └── domain.csv               ← Đặt file Tranco đã đổi tên vào đây
+├── scripts/                     # Pipeline quét TLS (bash)
 │   ├── 01_filter_vn.sh
 │   ├── 02_zgrab_tls.sh
 │   ├── 03_httpx_layer7.sh
@@ -75,34 +75,44 @@ chmod +x *.sh
 ```
 
 Pipeline sẽ tự động:
-1. Lọc domain `.vn` từ `data/domain.csv`
+1. Lọc domain `.vn` từ `domain.csv`
 2. Quét TLS/ALPN/HSTS
 3. Merge kết quả
 
-**Kết quả cuối cùng:** `data/results.csv`
+**Kết quả cuối cùng:** `results.csv`
 
 ---
 
 ### 📄 License
+
 Mã nguồn được phân phối theo giấy phép **MIT**.
 
 ---
 
+### 🙏 Acknowledgments
+
+Nghiên cứu sử dụng các công cụ open-source sau đây:
+
+- **[ZGrab2](https://github.com/zmap/zgrab2)** — Apache 2.0 + ISC License
+- **[HTTPX](https://github.com/projectdiscovery/httpx)** — MIT License
+- **OpenSSL, cURL, jq** — Các công cụ hệ thống open-source
+
+Cảm ơn các tác giả và cộng đồng đã phát triển và duy trì những công cụ tuyệt vời này.
+
+---
+
 ### 👤 Tác giả
-**Phan Văn Hợp**  
-Sinh viên năm hai Khoa Toán – Tin học  
+
+**Phan Văn Hợp** Sinh viên năm hai Khoa Toán – Tin học  
 Trường Đại học Sư phạm – Đại học Đà Nẵng  
 
-**Liên hệ:**  
-- Email: dinhonphan226@gmail.com  
+**Liên hệ:** - Email: dinhonphan226@gmail.com  
 - GitHub: [@kurunetwork](https://github.com/kurunetwork)
 
 ---
 
-**⭐ Nếu repo hữu ích, hãy cho mình 1 star nhé!**  
-Mọi góp ý, báo lỗi hoặc cải tiến vui lòng tạo **Issue**.
+**⭐ Nếu repo hữu ích, hãy cho mình 1 star nhé!** Mọi góp ý, báo lỗi hoặc cải tiến vui lòng tạo **Issue**.
 
 ---
 *Last updated: 07 Tháng 4, 2026*
 ```
-
