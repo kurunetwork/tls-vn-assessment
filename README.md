@@ -1,5 +1,3 @@
-Dưới đây là phiên bản **README.md đã được sửa chữa và hoàn thiện** dựa trên mã bạn cung cấp. Tôi đã sửa lỗi cấu trúc cây thư mục (cấu trúc bị rối và sai indentation), làm rõ hơn phần chuẩn bị dữ liệu, và cập nhật ngày Last updated cho phù hợp với thời gian hiện tại.
-
 ```markdown
 # Đánh Giá Thực Nghiệm Mức Độ Áp Dụng TLS, ALPN Và HSTS Trên Tên Miền .vn
 **Đối Chiếu Tiêu Chuẩn NIST SP 800-52 Rev.2 & BSI TR-02102-2**
