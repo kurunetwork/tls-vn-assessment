@@ -7,8 +7,9 @@
 [![Last Scan](https://img.shields.io/badge/Last%20Scan-05%20Tháng%204,%202026-success)](https://github.com/kurunetwork/tls-vn-assessment)
 
 ---
+
 ### 📋 Tóm tắt nghiên cứu
-Báo cáo trình bày nghiên cứu thực nghiệm quy mô lớn đầu tiên tại Việt Nam về mức độ triển khai **TLS 1.3**, **ALPN**, **HSTS** và cipher suite trên toàn bộ tên miền TLD `.vn`.
+Báo cáo trình bày **nghiên cứu thực nghiệm quy mô lớn đầu tiên tại Việt Nam** về mức độ triển khai **TLS 1.3**, **ALPN**, **HSTS** và cipher suite trên **toàn bộ** tên miền TLD `.vn`.
 
 **Kết quả nổi bật:**
 - 100% tên miền đã loại bỏ hoàn toàn TLS 1.0/1.1
@@ -18,6 +19,7 @@ Báo cáo trình bày nghiên cứu thực nghiệm quy mô lớn đầu tiên t
 - HSTS chỉ đạt **26,04%**
 
 ---
+
 ### 🧪 Dữ liệu & Phương pháp
 - **Nguồn chính**: Tranco Top 1M (ID: **ZWLZG**, ngày 17/03/2026) + lọc CrUX Việt Nam
 - Mẫu hợp lệ: **6.456** tên miền `.vn`
@@ -34,6 +36,7 @@ Báo cáo trình bày nghiên cứu thực nghiệm quy mô lớn đầu tiên t
 Pipeline sẽ tự động lọc chỉ các domain `.vn` từ file này trong bước `01_filter_vn.sh`.
 
 ---
+
 ### 📁 Cấu trúc repository
 
 ```
@@ -52,6 +55,17 @@ tls-vn-assessment/
 ```
 
 ---
+
+### 🛠️ Yêu cầu hệ thống
+- Hệ điều hành: Linux / macOS (khuyến nghị Ubuntu 22.04+)
+- Bash ≥ 5.0
+- Công cụ cần cài đặt:
+  - `zgrab2` (từ https://github.com/zmap/zgrab2)
+  - `httpx` (từ https://github.com/projectdiscovery/httpx)
+  - `openssl`, `curl`, `jq`
+
+---
+
 ### 📝 Cách sử dụng pipeline
 
 ```bash
@@ -60,44 +74,39 @@ chmod +x *.sh
 ./run_all.sh
 ```
 
-Pipeline sẽ thực hiện lần lượt:
-- Lọc domain `.vn` từ `data/domain.csv`
-- Chạy quét TLS/ALPN/HSTS bằng ZGrab2 và HTTPX
-- Merge kết quả cuối cùng vào thư mục `data/`
+**Pipeline sẽ thực hiện lần lượt:**
+1. Lọc domain `.vn` từ `data/domain.csv`
+2. Chạy quét TLS/ALPN/HSTS bằng ZGrab2 và HTTPX
+3. Merge kết quả cuối cùng vào thư mục `data/`
+
+Kết quả cuối cùng sẽ nằm tại: `data/final_results.csv`
 
 ---
+
 ### 📄 License
 Mã nguồn pipeline được phân phối theo giấy phép **MIT**.
 
 ---
+
 ### 👤 Tác giả
 **Phan Văn Hợp**  
 Sinh viên năm hai Khoa Toán – Tin học  
 Trường Đại học Sư phạm – Đại học Đà Nẵng  
-Email: dinhonphan226@gmail.com  
-GitHub: [@kurunetwork](https://github.com/kurunetwork)
+
+**Liên hệ:**  
+- Email: dinhonphan226@gmail.com  
+- GitHub: [@kurunetwork](https://github.com/kurunetwork)
 
 ---
+
 **⭐ Nếu repo hữu ích, hãy cho mình 1 star nhé!**  
-Mọi góp ý hoặc cải tiến vui lòng tạo **Issue**.
+Mọi góp ý, cải tiến hoặc báo lỗi vui lòng tạo **Issue** trên GitHub.
 
 ---
 *Last updated: 07 Tháng 4, 2026*
 ```
 
-**✅ ĐÃ SỬA HOÀN TOÀN LỖI CỦA BẠN:**
 
-- Phần **cấu trúc repository** giờ đã thẳng hàng đẹp (không còn dính sát, không còn “text---”).
-- Thêm lại **badges** (License, Bash, Last Scan) ở đầu.
-- Sửa lại toàn bộ định dạng Markdown (heading, list, code block, bold…).
-- Giữ nguyên toàn bộ nội dung bạn cung cấp, chỉ làm sạch và chuẩn GitHub.
+Bạn chỉ cần **copy toàn bộ** khối trên, dán đè vào file `README.md`, commit và push là xong.
 
-**Cách dùng:**
-1. Copy **toàn bộ** khối markdown phía trên.
-2. Mở file `README.md` trong repo của bạn.
-3. Xóa hết nội dung cũ → dán vào → lưu.
-4. Commit & push lên GitHub.
-
-Bây giờ README sẽ hiển thị đẹp và chuyên nghiệp.  
-
-Nếu vẫn thấy lỗi khi render trên GitHub, chụp màn hình lỗi gửi mình nhé!
+Nếu bạn muốn thêm gì nữa (ví dụ: thêm ảnh biểu đồ kết quả, bảng so sánh, hoặc phần “Citation”), cứ nói mình sẽ chỉnh tiếp ngay!
