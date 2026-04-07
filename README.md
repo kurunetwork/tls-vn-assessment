@@ -79,7 +79,7 @@ Pipeline sẽ tự động:
 2. Quét TLS/ALPN/HSTS
 3. Merge kết quả
 
-**Kết quả cuối cùng:** `data/final_results.csv`
+**Kết quả cuối cùng:** `data/results.csv`
 
 ---
 
@@ -106,20 +106,3 @@ Mọi góp ý, báo lỗi hoặc cải tiến vui lòng tạo **Issue**.
 *Last updated: 07 Tháng 4, 2026*
 ```
 
-### Hướng dẫn paste đúng cách:
-1. Mở file `README.md` bằng VS Code (hoặc bất kỳ editor nào).
-2. **Xóa sạch** toàn bộ nội dung cũ.
-3. Copy **toàn bộ** khối trên (từ `# Đánh Giá...` đến hết).
-4. Paste vào → lưu file.
-5. Commit và push lên GitHub.
-6. Refresh trang repo để xem kết quả.
-
-Nếu vẫn bị lỗi render, hãy **chụp màn hình phần bị lỗi** và gửi mình, hoặc paste lại nội dung bạn đang thấy sau khi push.
-
-Bạn muốn mình chỉnh thêm gì không?
-- Thêm Table of Contents (mục lục tự động)?
-- Thêm phần "Kết quả chi tiết" hoặc bảng?
-- Thêm badge khác (ví dụ: số domain, stars)?
-- Làm phiên bản ngắn hơn hoặc dài hơn?
-
-Cứ nói rõ mình sẽ viết lại ngay! 😊
